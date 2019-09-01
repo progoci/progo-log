@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test client</title>
+</head>
+<body>
+
+  <script>
+    let socket = new WebSocket("ws://localhost:8080/store");
+
+    socket.onopen = () => {
+      console.log("Successfully open websocket");
+      socket.send("This is a message from client");
+    }
+
+    socket.onclose = (event) => {
+      console.log("Socket closed");
+    }
+
+    socket.onmessage = (event) => {
+      console.log(event);
+    }
+  </script>
+
+</body>
+</html>
