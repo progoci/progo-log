@@ -1,19 +1,20 @@
-module progo/loom
+module github.com/progoci/progo-log
 
-go 1.12
+go 1.14
 
 require (
-	github.com/go-kit/kit v0.9.0 // indirect
-	github.com/go-stack/stack v1.8.0 // indirect
-	github.com/gorilla/mux v1.7.3
-	github.com/gorilla/websocket v1.4.0
-	github.com/segmentio/kafka-go v0.3.3
-	go.mongodb.org/mongo-driver v1.1.0
-	golang.org/x/crypto v0.0.0-20190820162420-60c769a6c586 // indirect
-	golang.org/x/sync v0.0.0-20190423024810-112230192c58 // indirect
-	golang.org/x/text v0.3.2 // indirect
-
-	progo/core v0.0.0
+	github.com/gin-gonic/gin v1.6.3
+	github.com/golang/gddo v0.0.0-20200611223618-a4829ef13274
+	github.com/golang/protobuf v1.4.1
+	github.com/gorilla/websocket v1.4.2
+	github.com/pkg/errors v0.9.1
+	github.com/progoci/progo-build v0.0.0-20200704013409-a9c84b4ab9e8
+	github.com/progoci/progo-core v0.0.0-20200703210147-b5e9f8fc24ff
+	github.com/sirupsen/logrus v1.6.0
+	go.mongodb.org/mongo-driver v1.3.4
+	google.golang.org/grpc v1.30.0
+	google.golang.org/protobuf v1.25.0
 )
 
-replace progo/core => ../../core
+// For development
+// replace github.com/progoci/progo-core => ./core

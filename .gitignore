@@ -1,5 +1,2 @@
 .env
-vendor/
-vendor.orig/
-tmp/
-loom
+server

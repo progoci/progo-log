@@ -1,0 +1,19 @@
+syntax = "proto3";
+package progolog;
+
+option go_package = "github.com/progoci/progo-log/progolog";
+
+service Logger {
+  rpc Store(stream Log) returns (Response) {}
+}
+
+message Log {
+  int32 stepNumber = 1;
+  string buildID = 2;
+  string serviceName = 3;
+  string stepName = 4;
+  string command = 5;
+  bytes body = 6;
+}
+
+message Response {}
